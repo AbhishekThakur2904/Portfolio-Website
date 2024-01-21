@@ -758,7 +758,22 @@ font-weight: 500;
     .contact-form {
         max-width: 100%;
     }
+    .contact-form form input,
+    .contact-form form textarea {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .contact-form textarea {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+
+    .contact-form form .send {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 10px 20px;
+    }
 }
+
 #menu-button {
     background: #5FFF69;
     border: none;
