@@ -63,23 +63,7 @@ body {
     align-items: center;
     padding: 70px 10% 0;
 }
-@media only screen and (max-width: 768px) {
-    .home {
-        padding: 50px 5% 0;
-    }
 
-    .home-content {
-        max-width: 100%;
-    }
-
-    .home-content h1 {
-        font-size: 32px;
-    }
-
-    .home-content p {
-        font-size: 14px;
-    }
-}
 .home-content {
     max-width: 600px;
 
@@ -693,26 +677,22 @@ font-weight: 500;
 
 /* Media Queries */
 
-
-@media (max-width: 768px) {
-    body {
-        padding-top: 60px; 
-    }
-
+@media only screen and (max-width: 768px) {
     .header {
-        padding: 10px;
+        padding: 20px 5%;
     }
 
     .navbar {
+        display: none;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         text-align: center;
-        position: fixed;
+        position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
         background: #1f1f1f;
-        display: none; 
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     .navbar.show {
@@ -720,181 +700,62 @@ font-weight: 500;
     }
 
     .navbar a {
-        margin: 10px 0; 
+        margin: 15px 0;
     }
 
-    .logo {
-        font-size: 20px; 
-        margin-bottom: 10px; 
-    }
-}
-@media (max-width: 768px) {
-    #menu-button {
-        display: block; /* Show on smaller screens */
-        margin: 10px 0; /* Add spacing around the button */
-    }
-}
-
-
-@media screen and (max-width: 768px) {
     .home {
-        justify-content: center;
-        text-align: center;
-        padding: 70px 20px 0;
-        padding-left: 20px; /* Adjust the left padding as needed */
-        padding-right: 20px; /* Adjust padding for better mobile appearance */
+        padding: 70px 5% 0;
     }
 
     .home-content {
         max-width: 100%;
-        margin-left: 250px; /* Adjust width for mobile */
     }
 
-    .home-sci {
-        text-align: center; /* Center the social icons */
-    }
-
-    .home-sci a {
-        margin: 15px; /* Adjust margin for spacing */
-    }
-}
-    
-@media screen and (max-width: 768px) {
     .about {
-        grid-template-columns: 1fr; /* Change to a single column layout */
-        text-align: center; /* Center the content */
-        padding: 40px 20px; /* Adjust padding for better mobile appearance */
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .about-img {
-        margin-left: 30px; /* Remove the left margin for the image */
+    .about-img img {
+        margin-left: 0;
     }
-    .about-text {
-        margin-left: 130px;
-        margin-right: auto;
-        max-width: 600px; 
-        width: 100%;/* Reset any left margin */
-    }
+
     .about-text h2 {
-        font-size: 36px; /* Adjust the font size */
+        font-size: 40px;
     }
 
     .about-text h4 {
-        font-size: 18px; /* Adjust the font size */
-        margin: 15px 0 20px; /* Adjust the margin */
+        font-size: 22px;
     }
 
-    .about-text p {
-        font-size: 16px; /* Adjust the font size */
-        margin-bottom: 2rem;
-    }
-}
-@media screen and (max-width: 767px) {
+    .about-text p,
     #services {
-        text-align: center;
-        margin-left: 150px;
-    }
-
-    .sub-title {
-        padding-bottom: 30px; /* Adjust padding as needed */
+        width: 100%;
     }
 
     .container {
-        padding: 30px; /* Adjust padding as needed */
+        padding: 40px;
     }
 
     .services-list {
-        grid-template-columns: 1fr; /* Display services in a single column */
-        grid-gap: 20px; /* Adjust gap between services */
-    }
-    
-    .services-list div {
-        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .services-list div i {
-        margin-bottom: 15px; /* Adjust margin as needed */
+    .progress-bar h3 {
+        font-size: 16px;
     }
 
-    .services-list div h2 {
-        font-size: 24px; /* Adjust font size as needed */
-    }
-
-    .services-list div a {
-        margin-top: 10px; /* Adjust margin as needed */
-    }
-}
- @media screen and (max-width: 767px) {
-    .container1 {
-        padding-top: 30px;
-
-    }
-}
-.portfolio .main-text h2{
-    padding-bottom: 50px;
-}
-.portfolio-content{
-    gap: 20px;
-}
-@media screen and (max-width: 767px) {
     .contact {
-        padding: 40px 20px; /* Adjust padding for smaller screens */
+        padding: 70px 10%;
     }
 
-    .contact-text {
-        text-align: center;
-    }
-
-    .contact-form {
-        margin-top: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 767px) {
-    .contact {
-        padding: 40px 20px; /* Adjust padding for smaller screens */
-    }
-
-    .contact-text {
-        text-align: center;
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .contact-form {
-        margin-top: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .contact-form {
-        margin-top: 15px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .contact-form textarea {
-        resize: vertical;
-    }
-
-    .contact-form .send {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .last-text {
-        text-align: center;
-        padding: 20px 0;
-width: 620px;
+        max-width: 100%;
     }
 }
