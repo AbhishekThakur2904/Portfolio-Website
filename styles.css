@@ -847,5 +847,6 @@ font-weight: 500;
 
     .navbar.show {
         display: flex;
+        margin-left: 500px
     }
 }
