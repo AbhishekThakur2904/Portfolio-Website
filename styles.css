@@ -843,10 +843,11 @@ font-weight: 500;
         align-items: center;
         text-align: center;
         z-index: 99;
+        margin-left: -500px
     }
 
     .navbar.show {
         display: flex;
-        margin-left: 500px
+    
     }
 }
