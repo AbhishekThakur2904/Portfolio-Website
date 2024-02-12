@@ -9,6 +9,7 @@
 body {
     color: #ededed;
     background-color: #292929;
+    overflow-x: hidden;
 }
 
 .header {
@@ -466,13 +467,17 @@ font-weight: 500;
     justify-content: center;
 
 }
-.row{
+.row {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Display as column on small screens */
+    align-items: center; /* Center horizontally */
+    text-align: center;
 }
-.row img{
+.row img {
     justify-content: center;
     width: 550px;
     height: 350px;
@@ -480,11 +485,12 @@ font-weight: 500;
     display: block;
     transition: transform 0.5s;
     margin-left: 60px;
+    margin-top: 20px; /* Add margin for better spacing */
 }
-.layer{
+.layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), #cbcbcb);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #cbcbcb);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -497,7 +503,6 @@ font-weight: 500;
     text-align: center;
     padding: 0 40px;
     transition: height 0.5s;
-
 }
 .layer h5{
     color: #000;
@@ -662,7 +667,7 @@ font-weight: 500;
     border-radius: .5rem;
 }
 
-
+/* Style for the menu button */
 #menu-button {
     background: #5FFF69;
     color: #1f1f1f;
@@ -671,11 +676,11 @@ font-weight: 500;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
-    display: none;
+    display: none; /* Initially hide on larger screens */
 }
 
 
-
+/* Media Queries */
 
 @media only screen and (max-width: 768px) {
     .header {
@@ -728,29 +733,106 @@ font-weight: 500;
         font-size: 22px;
     }
 
-    .about-text p,
+    .about-text p {
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+    
+    }
     #services {
         width: 100%;
     }
+   
     .my-skills{
         display: flex;
         flex-direction: column;
         
 
     }
-    .portfolio-content{
-        display: flex;
-    
+    .main-text{
+        padding: 0;
     }
-    .row img{
-        margin-top: 100px;
+    .main-text h2{
+        margin-left: 0;
+    }
+    .portfolio-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
 
-    .main-text h2{
-        margin-left: -1120px;
-    font-size: 40px;
-    margin-top: -200px;
+    .row {
+        width: 100%;
+        margin: 10px auto; /* Center the entire row */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 30px;/* Adjust margin as needed for spacing between portfolio items */
     }
+
+    .row img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Ensure the aspect ratio is maintained */
+        border-radius: 8px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    
+
+    .layer {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), #cbcbcb);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+        transition: height 0.5s;
+    }
+
+    .layer h5 {
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .layer p {
+        color: #000;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .layer i {
+        color: #ff004f;
+        margin-top: 15px;
+        font-size: 20px;
+        background: #fff;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .row:hover img {
+        transform: scale(1.1);
+    }
+
+    .row:hover .layer {
+        height: 100%;
+    }
+    
     .heading1{
         margin-left: -100px;
         text-decoration: none;
@@ -766,9 +848,7 @@ font-weight: 500;
 .professional-skills{
     margin-top: 500px;
 }
-    .sub-title{
-        margin-left: 50px;
-    }
+   
 
     .container {
         padding: 40px;
@@ -803,11 +883,11 @@ font-weight: 500;
     }
 
     .contact-form textarea {
-        height: 120px; 
+        height: 120px; /* Adjust height for smaller screens */
     }
 
     .contact-form form .send {
-        font-size: 14px; 
+        font-size: 14px; /* Adjust font size for smaller screens */
         padding: 10px 20px;
     }
     .top{
@@ -824,11 +904,11 @@ font-weight: 500;
 }
 
 
-
+/* Adjust the position for the hamburger icon */
 @media (max-width: 768px) {
     #menu-button {
         display: block;
-        margin-right:1030px;
+        margin-right:10px;
     }
 
     .navbar {
@@ -843,11 +923,9 @@ font-weight: 500;
         align-items: center;
         text-align: center;
         z-index: 99;
-        margin-left: -500px
     }
 
     .navbar.show {
         display: flex;
-    
     }
 }
